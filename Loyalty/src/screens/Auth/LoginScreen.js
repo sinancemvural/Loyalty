@@ -1,12 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from "react";
+import { Text } from "react-native";
+import Layout from "../../components/Layout";
 
 export default function LoginScreen() {
   return (
-    <View>
-      <Text>LoginScreen</Text>
-    </View>
-  )
+    <Layout>
+      <Text>Bu Login ekranı. Ortak header, footer ve arka plan geldi 👌</Text>
+    </Layout>
+  );
 }
-
-const styles = StyleSheet.create({})
