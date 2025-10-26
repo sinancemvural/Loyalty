@@ -5,7 +5,13 @@ import AppNavigator from "./AppNavigator";
 import AuthNavigator from "./AuthNavigator";
 
 export default function RootNavigator() {
-  const { user } = useContext(AuthContext);
+  const context = useContext(AuthContext);
+
+  if (!context) {
+    return null;
+  }
+
+  const { user } = context;
 
   return (
     <NavigationContainer>

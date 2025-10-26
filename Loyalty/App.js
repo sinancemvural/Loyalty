@@ -1,7 +1,11 @@
-import Login from './src/screens/Auth/LoginScreen'
+import React from "react";
+import RootNavigator from "./src/navigation/RootNavigator";
+import { AuthProvider } from "./src/context/AuthContext";
 
 export default function App() {
   return (
-    <Login />
+    <AuthProvider>
+      <RootNavigator />
+    </AuthProvider>
   );
 }

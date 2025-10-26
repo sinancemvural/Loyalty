@@ -5,7 +5,7 @@ import colors from "../theme/colors";
 export default function Footer() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>© 2025 MyApp</Text>
+      <Text style={styles.text}>SinanCemVural 2025 ©LoyalApp</Text>
     </View>
   );
 }
@@ -13,11 +13,11 @@ export default function Footer() {
 const styles = StyleSheet.create({
   container: {
     height: 50,
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.background,
     justifyContent: "center",
     alignItems: "center",
   },
   text: {
-    color: colors.white,
+    color: colors.textColor,
   },
 });

@@ -1,15 +1,25 @@
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet,Image} from 'react-native'
 import React from 'react'
 
 import colors from '../theme/colors'
 import fonts from '../theme/fonts'
 
-const Header = () => {
+
+export default function Header (){
   return (
-    <View>
-      <Text>Header</Text>
+    <View style={styles.container}>
+     
     </View>
   )
 }
 
-export default Header
+const styles = StyleSheet.create({
+  container: {
+    height: '15%',
+    backgroundColor: colors.background,
+    justifyContent: "center",
+  },
+  text: {
+    color: colors.textColor,
+  },
+});

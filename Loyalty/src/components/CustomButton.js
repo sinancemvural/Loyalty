@@ -1,28 +1,22 @@
-import { Touchable, TouchableOpacity, StyleSheet ,Text} from 'react-native'
+import { TouchableOpacity, StyleSheet ,Text} from 'react-native'
 
 import colors from '../theme/colors'
 import fonts from '../theme/fonts'
 
-function Button(props)
-{
-    return(
-    <TouchableOpacity style={styles.container}> 
-        <Text style={styles.fonts}>{props.name}</Text>
-    </TouchableOpacity>
-    )
-}
 
-export default function CustomButton({name})
+export default function CustomButton(props)
 {
     return(
-       <Button name={name} />
+            <TouchableOpacity style={styles.container} onPress={props.func}> 
+                <Text style={styles.fonts}>{props.name}</Text>
+            </TouchableOpacity>
     )
 }
 
 const styles=StyleSheet.create({
     container:{
         backgroundColor:colors.primary,
-        width:'25%',
+        width:'35%',
         height:35,
         borderRadius:10,
         alignItems:'center',
@@ -32,6 +26,6 @@ const styles=StyleSheet.create({
     fonts:{
         fontSize:fonts.size.medium,
         fontWeight:fonts.bold,
-        color:colors.secondary
+        color:colors.textColor
     }
 });

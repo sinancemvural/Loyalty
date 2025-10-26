@@ -1,6 +1,7 @@
 export default {
-    primary: "#EFE3C8",
-    secondary: "#4A2B29",
-    background: "#201520",
+    primary: "hsl(25, 50%, 55%)",
+    secondary: "hsl(120, 20%, 50%)",
+    background: "hsl(25, 33%, 21%)",
+    textColor:"hsl(35, 30%, 85%)"
   };
   
