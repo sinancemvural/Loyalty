@@ -9,11 +9,12 @@ export default function RegisterScreen({navigation}) {
     const[email,setEmail]=React.useState('')
     const[password,setPassword]=React.useState('')
     const[rePassword,setRePassword]=React.useState('')
+    const[adSoyad,setAdSoyad]=React.useState('');
 
     const { login } = useContext(AuthContext);
 
     const handleRegister = () => {
-        if (!rePassword || !email || !password) {
+        if (!rePassword || !email || !password || !adSoyad) {
           alert("Lütfen tüm alanları doldurun");
           return;
         }
@@ -47,10 +48,9 @@ export default function RegisterScreen({navigation}) {
 
   return (
     <Layout >
-        <View style={{alignItems:'center',flex:3}}> 
-            <Image source={require('../../../assets/image/logo.png')} style={{width:250,height:250,borderRadius:75}}/>
-        </View>
-        <View style={{flex:2,alignItems:'center'}}>
+        <View style={{flex:4,alignItems:'center'}}>
+            <Image source={require('../../../assets/image/logo.png')} style={{width:'30%',height:'30%',borderRadius:75}}/> 
+            <InputArea placeholder={"Ad Soyad"} v={adSoyad} changeText={setAdSoyad} secure={false} />
             <InputArea placeholder={"Email"} v={email} changeText={setEmail} secure={false} />
             <InputArea placeholder={"Şifre(En az 6 Karakter)"} v={password} changeText={setPassword} secure={true} />
             <InputArea placeholder={"Şifre Tekrar"} v={rePassword} changeText={setRePassword} secure={true} />      

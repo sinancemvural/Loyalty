@@ -6,10 +6,7 @@ import CustomButton from '../../components/CustomButton'
 export default function SettingsScreen({navigation}) {
   return (
     <Layout >
-        <View>
-            <Text>Üye Ol</Text>
-            <CustomButton name="Geri" func={()=>navigation.navigate('Login')} />
-        </View>
+        
     </Layout>
   )
 }

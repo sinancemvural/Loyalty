@@ -28,8 +28,8 @@ export default function LoginScreen({navigation}) {
   return (
     <Layout style={styles.container}>
       <View style={{flex:3,alignItems:'center',justifyContent:'center'}}>
-        <Image source={require('../../../assets/image/logo.png')} style={{width:250,height:250,borderRadius:75}}/>
-        <InputArea placeholder={"KullanıcıAdı"} v={userName} changeText={setUserName} secure={false}/>
+        <Image source={require('../../../assets/image/logo.png')} style={{width:'40%',height:'40%',borderRadius:75}}/>
+        <InputArea placeholder={"Email"} v={userName} changeText={setUserName} secure={false}/>
         <InputArea placeholder={"Şifre"} v={password} changeText={setPassword} secure={true} />
       </View>
       <View style={{flex:1,flexDirection:'row',justifyContent:'center'}}>
